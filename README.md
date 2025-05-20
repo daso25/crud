@@ -51,7 +51,7 @@ Debemos instalar: npm i sequelize-typescript
 Los modelos se nombran con mayuscula: Product.model.ts, Categoria.model.ts
 
 8. CREANDO ROUTER
-9. 
+    
 Creamos los handlers para no tener toda la logica dentro del router, los handlers son pequeñas funciones que llamamos en otros archivos, en este caso en el Router
 
 Instalar Express Validator: npm i express-validator  
