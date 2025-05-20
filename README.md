@@ -2,31 +2,36 @@
 CRUD  /  Express - NodeJS, TS, React, PostgreSQL
 REST API
 
-=================================CREAR EL PACKAGE.JSON=====================================
+1. CREAR EL PACKAGE.JSON
+
 npm init en el server
 
 Este es un proyecto donde se usan handlers como arquitectura ya que es un proyecto simple
 
-=================================INSTALAR TS NODE=====================================
+2. INSTALAR TS NODE
+
 Se deben instalar dependencias para poder trabajar con TS (npm i -D typescript ts-node)
 Se debe instalar una dependencias para que ejecute Node cada que exista un cambio
 
-=================================INSTALAR NODEMON=====================================
+3. INSTALAR NODEMON
+   
 en scripts el test se cambia por dev y el valor sera npx ts-node src/index.ts
 sin embargo debe instalarse nodemon para hacer un watch constante npm i -D nodemon
 
-y ahora el valor de dev no sera npx ts-node src/index.ts sino nodemon --exec ts-node src/index.ts
+Y ahora el valor de dev no sera npx ts-node src/index.ts sino nodemon --exec ts-node src/index.ts
 
 para compila de TS a JS -> se crea el tsconfig y se corre el comando npx tsc para ejecutarse
 
 
-=================================INSTALAR EXPRESS=====================================
+4. INSTALAR EXPRESS
+
 npm i express
 npm i -D @types/express -> este solo se usa cuando se trabaja con TS
 
 
 
-=================================CONEXIÓN A DB DESDE EXPRESS=====================================
+6. CONEXIÓN A DB DESDE EXPRESS
+   
 instalar Sequalize -> Documentacion: https://sequelize.org/docs/v6/getting-started/
 
 para PostgreSQL: 
@@ -38,21 +43,21 @@ Para usar .env files es recomendado usar dotenv:
 npm i dotenv
 
 
-=================================CREANDO MODELOS=====================================
+7. CREANDO MODELOS
+   
 Los modelos son la iteración con la base de datos, basicamente es la estrucutra de la tabla de la BD
 
 Debemos instalar: npm i sequelize-typescript
 Los modelos se nombran con mayuscula: Product.model.ts, Categoria.model.ts
 
-
-=================================CREANDO ROUTER=====================================
-
+8. CREANDO ROUTER
+9. 
 Creamos los handlers para no tener toda la logica dentro del router, los handlers son pequeñas funciones que llamamos en otros archivos, en este caso en el Router
 
 Instalar Express Validator: npm i express-validator  
 
-=================================TESTING=====================================
-
+9. TESTING
+    
 Instalando supertest y jest: npm i -D supertest @types/supertest jest @types/jest ts-jest
 
 Crear archivo jest.config: npx ts-jest config:init
