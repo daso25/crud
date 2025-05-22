@@ -1,3 +1,6 @@
-import { suma } from "./server";
+import server from "./server";
 
-suma(1, 2);
+
+server.listen(4002, () => {
+  console.log("Server is running on port 4002");
+});

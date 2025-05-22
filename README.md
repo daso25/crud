@@ -36,7 +36,7 @@ instalar Sequalize -> Documentacion: https://sequelize.org/docs/v6/getting-start
 
 para PostgreSQL: 
 npm install --save sequelize
-
+npm install --save pg pg-hstore
 En la carpeta config se crea un archivo el cual llamamos db.ts -> aqui va la configuración de la conexion a la BD pero la conexion se hace en el server
 
 Para usar .env files es recomendado usar dotenv:
