@@ -20,7 +20,7 @@ connectDB();
 const server = express();
 
 server.use('/api/products', router);
-server.use(express.json());
+server.use(express.json()); //Permite la lectura de datos en formato JSON
 
 
 export default server;
