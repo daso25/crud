@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import Product from '../models/Products.model'
-/*
+
 export const getProducts = async (req: Request, res: Response) => {
     const products = await Product.findAll({
         order: [
@@ -14,12 +14,13 @@ export const getProductById = async (req: Request, res: Response) => {
     const { id } = req.params
     const product = await Product.findByPk(id)
     if(!product) {
-        return res.status(404).json({
+         res.status(404).json({
             error: 'Producto No Encontrado'
         })
+        return
     }
     res.json({data: product})
-}*/
+}
 
 export const createProduct = async (req : Request, res : Response) => {
     const product = await Product.create(req.body)
@@ -29,15 +30,16 @@ export const createProduct = async (req : Request, res : Response) => {
     res.status(201).json({data: product})
 }
 
-/*
+
 export const updateProduct = async (req: Request, res: Response) => {
     const { id } = req.params
     const product = await Product.findByPk(id)
 
     if(!product) {
-        return res.status(404).json({
+         res.status(404).json({
             error: 'Producto No Encontrado'
         })
+        return
     }
     
     // Actualizar
@@ -51,9 +53,10 @@ export const updateAvailability = async (req: Request, res: Response) => {
     const product = await Product.findByPk(id)
 
     if(!product) {
-        return res.status(404).json({
+         res.status(404).json({
             error: 'Producto No Encontrado'
         })
+        return
     }
     
     // Actualizar
@@ -67,11 +70,12 @@ export const deleteProduct = async (req: Request, res: Response) => {
     const product = await Product.findByPk(id)
 
     if(!product) {
-        return res.status(404).json({
+         res.status(404).json({
             error: 'Producto No Encontrado'
         })
+        return
     }
     
     await product.destroy()
     res.json({data: 'Producto Eliminado'})
-}*/
+}
