@@ -70,3 +70,11 @@ correr el coverage npm run test:coverage y en el packjson despues del test , "te
 
 =======================CONSIDERACIONES IMPORTANTES==========================
 
+
+FRONTEND
+
+1. Instalar React Router
+npm i react-router-dom
+
+Leer sobre como funciona React Router
+
