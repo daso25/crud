@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { getProducts } from "../services/ProductService";
 import type { Product } from "../types/index";
 import ProductDetails from "../components/ProductDetails";
+
 export async function loader() {
   const products = await getProducts();
   return products;
@@ -9,7 +10,7 @@ export async function loader() {
 
 export default function Products() {
   const products = useLoaderData() as Product[];
-  console.log("Products loaded:", products);
+  //console.log("Products loaded:", products);
 
   return (
     <>

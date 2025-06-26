@@ -30,7 +30,7 @@ const corsOptions : CorsOptions = {
     console.log(color.blue(process.env.FRONTEND_URL));
     console.log("origin", origin); 
      
-   if(origin === process.env.FRONTEND_URL ){ // Permite conexiones desde el frontend
+ if(origin === process.env.FRONTEND_URL ){ // Permite conexiones desde el frontend
     callback(null, true);
    }else{
     callback(new Error('Not allowed by CORS'));
