@@ -4,7 +4,7 @@ dotenv.config();
 
 const db = new Sequelize(process.env.DATA_BASE_URL!, {
     dialect: 'postgres',
-    models: [__dirname + '/../models/**/*.ts'], // Path to your models
+    models: [__dirname + '/../models/**/*'], // Path to your models
     logging: false,
     dialectOptions: {
         ssl: {
